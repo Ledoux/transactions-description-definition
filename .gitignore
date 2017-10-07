@@ -1,0 +1,6 @@
+.DS_store
+.git
+.sass-cache/
+.stylelintrc
+node_modules/
+yarn-error.log

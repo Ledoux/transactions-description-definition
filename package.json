@@ -1,0 +1,39 @@
+{
+  "ava": {
+    "babel": {
+      "presets": [
+        "latest"
+      ]
+    },
+    "require": [
+      "babel-register",
+      "babel-polyfill"
+    ]
+  },
+  "author": "Erwan Ledoux",
+  "dependencies": {
+    "lodash.merge": "^4.6.0",
+    "lodash.mergewith": "^4.6.0",
+    "lodash.values": "^4.3.0",
+    "normalizr": "2.2.1",
+    "pluralize": "3.0.0",
+    "transactions-tests": "latest"
+  },
+  "description": "shared lib between frontend and backend to shape your ontology into description and definition objects",
+  "devDependencies": {
+    "ava": "^0.18.2",
+    "babel-cli": "^6.24.1",
+    "babel-preset-latest": "^6.24.1",
+    "nodemon": "^1.11.0"
+  },
+  "license": "MIT",
+  "main": "lib/index.js",
+  "name": "transactions-description-definition",
+  "scripts": {
+    "compile": "babel --presets latest -d lib/ src/",
+    "test": "ava -v",
+    "dev": "npm run dev-watch",
+    "dev-watch": "nodemon --watch src --exec \"npm run compile\""
+  },
+  "version": "0.0.2"
+}
