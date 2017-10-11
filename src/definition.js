@@ -5,7 +5,6 @@ import isEqual from 'lodash.isequal'
 import merge from 'lodash.merge'
 import mergeWith from 'lodash.mergewith'
 import values from 'lodash.values'
-import { normalize } from 'normalizr'
 import pluralize from 'pluralize'
 
 import { createDescription } from './description'
@@ -49,14 +48,12 @@ export function createDefinition (description = {}) {
       types[key] = type
     })
     // single Schema
-    const singleSchema = new SingleSchema(entityName, {
-      model,
+    const singleSchema = new SingleSchema(entityName, { model,
       types
     })
     singleSchemasByCollectionName[collectionName] = singleSchema
     // plural Schema
-    const pluralSchema = new PluralSchema(entityName, {
-      model,
+    const pluralSchema = new PluralSchema(entityName, { model,
       types
     })
     pluralSchemasByCollectionName[collectionName] = pluralSchema

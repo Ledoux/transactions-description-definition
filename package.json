@@ -15,7 +15,6 @@
     "lodash.merge": "^4.6.0",
     "lodash.mergewith": "^4.6.0",
     "lodash.values": "^4.3.0",
-    "normalizr": "2.2.1",
     "pluralize": "3.0.0",
     "transactions-tests": "latest"
   },
@@ -35,5 +34,5 @@
     "dev": "npm run dev-watch",
     "dev-watch": "nodemon --watch src --exec \"npm run compile\""
   },
-  "version": "0.0.2"
+  "version": "0.0.3"
 }

@@ -20,7 +20,7 @@ export const createDescription = config => {
       model.entityName = pluralize(model.collectionName, 1)
     }
     // special default join configuration
-    model.items.forEach(item => {
+    model.items && model.items.forEach(item => {
       if (/w*Id\b/.test(item.key) || /w*Ids\b/.test(item.key) ) {
         item.isAllJoins = isAllJoins
         item.isAllDeepJoins = isAllDeepJoins
